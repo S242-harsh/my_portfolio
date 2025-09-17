@@ -1,0 +1,129 @@
+.bgimage {
+  position: relative;
+  height: 100vh;
+  min-height: 100vh;
+  background: url('/my_portfolio/assets/images/SHANI5.jpg') center center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  color: #f5f5e9;
+}
+
+.bgimage::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #091629dd 0%, #03223edd 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-text {
+  text-align: center;
+  position: relative;
+  max-width: 900px;
+  padding: 0 15px;
+  z-index: 2;
+}
+
+/* The rest of hero styles remain the same as option 1 */
+
+.hero_title {
+  font-size: 5em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  position: relative;
+  color: #f5f5e9;
+}
+
+.hero_title::after {
+  content: "";
+  width: 180px;
+  height: 4px;
+  background: linear-gradient(90deg, #00aaff, #36fdff);
+  display: block;
+  margin: 12px auto 0;
+  border-radius: 5px;
+}
+
+.hero_desc {
+  font-size: 1.6em;
+  font-weight: 400;
+  margin-bottom: 2em;
+  line-height: 1.5;
+  color: #f5f5e9;
+}
+
+.highlight {
+  color: #00aaff;
+  display: inline-block;
+  animation: wave 2s ease-in-out infinite;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1.5em;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-btn {
+  background: linear-gradient(135deg, #3498db 0%, #1f78b4 100%);
+  color: #f0f5ff;
+  border: none;
+  padding: 1em 2.5em;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 18px;
+  cursor: pointer;
+  box-shadow: 0 6px 24px rgba(52, 152, 219, 0.3);
+  min-width: 140px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.hero-btn:last-child {
+  background: transparent;
+  border: 2px solid #3498db;
+  color: #3498db;
+}
+
+.hero-btn:hover {
+  background: linear-gradient(135deg, #1f78b4 0%, #145c81 100%);
+  color: #fff;
+}
+
+.hero-btn:last-child:hover {
+  background: #3498db;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .hero_title {
+    font-size: 3rem;
+  }
+  .hero_desc {
+    font-size: 1.2rem;
+  }
+  .hero-btn {
+    min-width: 120px;
+    font-size: 1rem;
+    padding: 0.8em 2em;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1em;
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
